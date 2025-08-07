@@ -103,7 +103,7 @@ header .button:hover a {
   text-decoration: none;
 }
 /* ********************** LANGAGES *********************** */
-#langages {
+#hard-skills {
   padding: 80px 80px 80px 50px;
   margin: 20px auto 0 6%;
   height: 690px;
@@ -116,7 +116,7 @@ header .button:hover a {
   );
   clip-path: polygon(0 5%, 100% 0, 89% 100%, 0 92%);
 }
-#langages .bar {
+#hard-skills .bar {
   padding: 10px 0 4px 0;
   letter-spacing: 0.1em;
 }
