@@ -193,7 +193,7 @@ header .button:hover a {
 
 /* ********************** PARCOURS *************************** */
 
-#parcours {
+#ags {
   max-width: 900px;
   margin: 750px auto 150px auto;
   padding: 40px 30px 50px 30px;
@@ -204,21 +204,21 @@ header .button:hover a {
   border-radius: 8px;
   box-shadow: -1px -1px 8px #283655;
 }
-#parcours h3 {
+#ags h3 {
   font-size: 2.5em;
   padding-bottom: 30px;
 }
-#parcours h4 {
+#ags h4 {
   font-size: 1.6em;
   color: #7053a6e6;
   margin-left: 20px;
 }
-#parcours h6 {
+#ags h6 {
   font-style: italic;
   color: #0a2d62;
   margin-left: 20px;
 }
-#parcours p {
+#ags p {
   line-height: 1.9em;
 }
 .timeline {
@@ -255,17 +255,17 @@ header .button:hover a {
 }
 
 /* ************************* PORTFOLIO ************************* */
-#portfolio {
+#xp-pro {
   margin: 100px 2% 0 2%;
   padding: 40px 10px 60px 40px;
   background-color: rgba(179, 172, 167, 0.08);
   box-shadow: 0px 0px 1px #a8a8a9;
 }
-#portfolio div {
+#xp-pro div {
   align-items: center;
 }
 
-#portfolio h3 {
+#xp-pro h3 {
   font-size: 3em;
   padding-bottom: 15px;
 }
