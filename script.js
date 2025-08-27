@@ -18,8 +18,8 @@ window.addEventListener("scroll", function () {
 var typed = new Typed(".typed", {
   strings: [
     "Bonjour à tous et à toutes.",
-    "À la suite à mes études en Chimie de Synthèse Organique, j'ai décidé de considérer l'informatique comme une perspective d'avenir et non plus seulement comme une passion.",
-    "Polyvalente, pragmatique et perspicace, je me suis investie à temps plein dans l'apprentissage du code. J'ai notamment validé une formation sur le langage Java et ses frameworks. <br/>In fine, j'approfondie en autodidacte mes skills en Java (particulièrement l'utilisation des frameworks Spring et Angular). <br/>Ainsi, je vous propose ma candidature afin d'apporter une plue-value dans vos projets de transition numérique.",
+    "Développeuse Java en mission chez Ariane Group, mon objectif est de décrocher un poste en interne dans une industrie du secteur aéronautique/spatial.",
+    "Adaptable et proactive, je suis spécialisée dans la conception et le developpement de logiciels pour systèmes de test et moyens sol.",
   ],
   typeSpeed: 15,
   typeSpeed: 20,
