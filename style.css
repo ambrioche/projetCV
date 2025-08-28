@@ -7,6 +7,7 @@ body {
   color: #283655 !important;
   background-color: #f7faff !important;
   font-family: "Rambla", sans-serif;
+  padding: 0 2vw;
 }
 h2,
 h3 {
@@ -17,6 +18,12 @@ h3 {
 }
 li {
   list-style-type: none;
+}
+
+/* ACCESSIBILITÉ : focus visible */
+a:focus, button:focus, .form-button:focus, input:focus, textarea:focus {
+  outline: 2px solid #0083b0;
+  outline-offset: 2px;
 }
 
 /* ************************ HEADER *********************** */
@@ -102,6 +109,7 @@ header .button:hover a {
   transition: all 0.3s ease-in-out;
   text-decoration: none;
 }
+
 /* ********************** LANGAGES *********************** */
 #hard-skills {
   padding: 80px 80px 80px 50px;
@@ -167,11 +175,14 @@ header .button:hover a {
   max-height: 50px;
 }
 
+/* MODERNISATION : Flexbox pour .counter */
 .counter {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
   text-align: center;
 }
-
 .data {
   border: 1px solid #35b4d5;
   width: 220px;
@@ -179,27 +190,23 @@ header .button:hover a {
   box-shadow: 0 0 8px #1c9dc4;
   padding: 1em;
 }
-
 .counter-value {
   font-size: 2em;
 }
 .data-texte {
   font-size: 1.3em;
 }
-
 .data-span {
   font-size: 1.8em;
 }
 
 /* ********************** PARCOURS *************************** */
-
 #ags {
   max-width: 900px;
   margin: 750px auto 150px auto;
   padding: 40px 30px 50px 30px;
   background-image: url(./media/avion.gif);
   background-attachment: fixed;
-  /* back 50% 50%; */
   background-size: cover;
   border-radius: 8px;
   box-shadow: -1px -1px 8px #283655;
@@ -264,7 +271,6 @@ header .button:hover a {
 #xp-pro div {
   align-items: center;
 }
-
 #xp-pro h3 {
   font-size: 3em;
   padding-bottom: 15px;
@@ -284,7 +290,6 @@ header .button:hover a {
 .projet p {
   text-align: justify;
 }
-
 .projet:nth-child(2) {
   margin-left: 3%;
 }
@@ -296,9 +301,6 @@ header .button:hover a {
   padding: 40px 20px 25px 0;
   width: 60%;
   max-width: 600px;
-  /* height: 30%;
-  max-height: 300px; */
-
   border: none;
   outline: none;
   background-color: transparent;
@@ -309,7 +311,6 @@ header .button:hover a {
 .img-container {
   width: 95%;
   height: 90%;
-  /* max-height: 300px; */
   overflow: scroll;
   margin: 0 auto;
   box-shadow: 1px 1px 10px #111;
@@ -318,7 +319,6 @@ header .button:hover a {
   position: relative;
   height: 33vh;
   max-height: 350px;
-
   margin: 0 auto;
 }
 .img-container:hover img {
@@ -405,6 +405,7 @@ header .button:hover a {
     transform: translateX(0) translateY(0);
   }
 }
+
 /* ********************* OTHER *********************** */
 #other-skills {
   margin-top: 80px;
@@ -440,152 +441,13 @@ header .button:hover a {
   text-shadow: -1px 1px 0px #375e97;
   margin: 1em;
 }
-/* .toto {
-  max-width: 1300px;
-  max-height: 300px;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-}
-ul#menu {
-  margin: auto;
-
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-
-  /* padding: 0; */
-/* margin-bottom: 10px;
-  -moz-perspective: 780px;
-  -webkit-perspective: 780px;
-  perspective: 780px;
-  background-color: transparent;
-}
-ul#menu li.nav-hobbies a {
-  display: block;
-  width: 100%;
-  height: 100%;
-} 
-ul#menu li.nav-hobbies {
-  text-indent: -9999px;
-  position: relative;
-  display: inline-block;
-  width: 200px;
-  height: 159px;
-  margin-right: -70px;
-  -moz-background-size: contain;
-  -webkit-background-size: contain;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  z-index: 50;
-  -moz-transform: rotateY(45deg);
-  -webkit-transform: rotateY(45deg);
-  transform: rotateY(45deg);
-  -moz-transition: all 0.45s;
-  -webkit-transition: all 0.45s;
-  transition: all 0.45s;
-  opacity: 0.8;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4),
-    0 0 30px rgba(0, 0, 0, 0.2);
-}
-*/
-/* ul#menu li.nav-hobbies:last-child,
-ul#menu li.nav-hobbies:first-child {
-  z-index: 45;
-}
-ul#menu li.nav-hobbies:nth-child(2),
-ul#menu li.nav-hobbies:nth-child(6) {
-  z-index: 46;
-}
-ul#menu li.nav-hobbies:nth-child(3),
-ul#menu li.nav-hobbies:nth-child(5) {
-  z-index: 51;
-}
-
-ul#menu li.highlighted {
-  -moz-transform: rotateY(0deg) scale(1.2);
-  -webkit-transform: rotateY(0deg) scale(1.2);
-  transform: rotateY(0deg) scale(1.2);
-  z-index: 55 !important;
-}
-ul#menu .highlighted ~ li.nav-hobbies {
-  -moz-transform: rotateY(-45deg);
-  -webkit-transform: rotateY(-45deg);
-  transform: rotateY(-45deg);
-}
-ul#menu li.nav-hobbies:hover,
-ul#menu li.nav-hobbies:first-child:hover,
-ul#menu li.highlighted ~ li.nav-hobbies:hover {
-  z-index: 60 !important;
-}
-ul#menu li.nav-hobbies:hover {
-  -moz-transform: rotateY(0deg) scale(1.2);
-  -webkit-transform: rotateY(0deg) scale(1.2);
-  transform: rotateY(0deg) scale(1.2);
-  opacity: 1;
-} */
-/* ul#menu li.nav-hobbies:hover ~ li.nav-hobbies {
-  -moz-transform: rotateY(-45deg);
-  -webkit-transform: rotateY(-45deg);
-  transform: rotateY(-45deg);
-}
-ul#menu:hover li.nav-hobbies:not(:hover) {
-  -moz-transform: rotateY(45deg);
-  -webkit-transform: rotateY(45deg);
-  transform: rotateY(45deg);
-}
-ul#menu:hover li.nav-hobbies:hover ~ li.nav-hobbies {
-  -moz-transform: rotateY(-45deg);
-  -webkit-transform: rotateY(-45deg);
-  transform: rotateY(-45deg);
-}
-ul#menu:not(:hover) li.highlighted {
-  opacity: 1;
-}
-ul#menu li.nav-hobbies:after {
-  content: "";
-  width: 200px;
-  height: 20px;
-  background: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  bottom: -20px;
-  left: 0;
-  mask-image: linear-gradient(gradient(rgba(0, 0, 0, 1), transparent));
-}
-ul#menu li.nav-hobbies:nth-child(1) {
-  background-image: url(./media/chess.gif);
-}
-ul#menu li.nav-hobbies:nth-child(2) {
-  background-image: url(./media/couture.jpeg);
-}
-ul#menu li.nav-hobbies:nth-child(3) {
-  background-image: url(./media/photographie.png);
-}
-ul#menu li.nav-hobbies:nth-child(4) {
-  background-image: url(./media/avion1.gif);
-}
-ul#menu li.nav-hobbies:nth-child(5) {
-  background-image: url(./media/cartes.png);
-}
-ul#menu li.nav-hobbies:nth-child(6) {
-  background-image: url(./media/peinture.jpeg);
-}
-ul#menu li.nav-hobbies:nth-child(7) {
-  background-image: url(./media/rubikcub.gif);
-} */
-
 .carousel {
   align-items: center;
   display: flex;
   justify-content: center;
-
   border-radius: 8px;
   padding: 20px 20px 10% 10%;
   margin: auto;
-
   background: none;
   transform: translateZ(0);
   max-height: 300px;
@@ -593,68 +455,8 @@ ul#menu li.nav-hobbies:nth-child(7) {
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
 }
-
 .touch .carousel {
   overflow: auto;
-}
-.carousel[data-at*="left"] > .wrap::before {
-  opacity: 1;
-  text-indent: -50px;
-}
-.carousel[data-at*="right"] > .wrap::after {
-  opacity: 1;
-  text-indent: -50px;
-}
-.carousel::after {
-  content: "";
-  pointer-events: none;
-  position: absolute;
-  z-index: 4;
-  bottom: -4px;
-  left: 0;
-  background: #d82b6a;
-  height: 4px;
-  border-radius: 4px;
-  opacity: 0;
-
-  width: var(--scrollWidth, 0);
-  left: var(--scrollLleft, 0);
-  transition: opacity 0.2s, bottom 0.2s;
-}
-.carousel:hover::after {
-  opacity: 1;
-  bottom: -10px;
-}
-.carousel > .wrap {
-  overflow: hidden;
-  border-radius: 4px;
-}
-.carousel > .wrap::before,
-.carousel > .wrap::after {
-  content: "\2039";
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 2;
-  width: 50px;
-  font-size: 80px;
-  text-indent: -30px;
-  line-height: 200px;
-  font-family: monospace;
-  color: #555;
-  font-weight: bold;
-  border-radius: 8px;
-  pointer-events: none;
-  transition: 0.2s ease-out;
-  background: linear-gradient(to right, #ffbb00 20%, transparent);
-}
-
-.carousel > .wrap::after {
-  transform: rotate(180deg);
-  left: auto;
-  right: 0;
 }
 .carousel > .wrap > ul {
   list-style: none;
@@ -671,7 +473,6 @@ ul#menu li.nav-hobbies:nth-child(7) {
   overflow: hidden;
   transition: 0.5s ease-out;
 }
-
 .carousel > .wrap > ul > li > img {
   height: 100%;
   position: relative;
@@ -695,18 +496,14 @@ footer h3 {
   font-size: 2.5em;
 }
 .footer-icons {
-  /* display: flex; */
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  /* row-gap: 20px; */
   justify-content: space-between;
   align-content: center;
-
   text-align: center;
   max-width: 60%;
 }
-
 .footer-icons div p {
   margin-top: 20px;
   font-weight: bold;
@@ -714,6 +511,7 @@ footer h3 {
   letter-spacing: normal;
 }
 
+/* ACCESSIBILITÉ : contraste boutons */
 .network {
   font-size: 4em;
   border: 1px solid #b3aca7;
@@ -721,6 +519,7 @@ footer h3 {
   color: #726659;
   z-index: -1 !important;
   border-radius: 50%;
+  transition: background 0.3s, color 0.3s;
 }
 .network:hover,
 textarea:hover,
@@ -776,6 +575,7 @@ textarea:hover:focus::placeholder {
   border: solid 1px #b3aca7;
   padding: 20px 75px;
   margin: 14px 0 -20px 0;
+  transition: background 0.3s, color 0.3s;
 }
 .form-container h4 {
   font-size: 2em;
@@ -827,6 +627,7 @@ footer p {
   font-size: 0.9em;
   letter-spacing: 0.3em;
 }
+
 /* ********************** MEDIA QUERIES *********************** */
 @media screen and (max-width: 1320px) {
   .counter-value {
@@ -859,7 +660,6 @@ footer p {
   .typed {
     font-size: 0.9em;
   }
-
   #langages {
     margin-left: 1%;
     margin-right: 1%;
@@ -868,7 +668,6 @@ footer p {
     margin-right: 1%;
     padding: 60px 60px 40px 30px;
   }
-
   .counter-value {
     font-size: 1.5em;
   }
@@ -883,7 +682,6 @@ footer p {
     width: 230px;
     margin: 0 2%;
   }
-
   #parcours {
     margin-top: 720px;
     max-width: 800px;
@@ -892,7 +690,6 @@ footer p {
     font-size: 2em;
     padding: 10px 20px;
   }
-
   .carousel > .wrap > ul {
     height: 190px;
   }
@@ -903,7 +700,6 @@ footer p {
     max-height: 200px;
   }
 }
-
 @media screen and (max-width: 770px) {
   .navbar {
     display: none !important;
@@ -911,7 +707,6 @@ footer p {
   .fixed-top {
     position: unset !important;
   }
-
   h1,
   h2 {
     font-size: 2em;
@@ -920,19 +715,27 @@ footer p {
     width: 80%;
     margin-left: 10%;
   }
-
-  #diplomes {
-    margin: 210px 0 0 10%;
-    width: 80%;
+  #hard-skills {
+    width: 100%;
+    margin: 0 auto;
     float: none;
-    /* display: block; */
+    padding: 40px 10px 40px 10px;
+    height: auto;
+    max-width: 100%;
+  }
+  #diplomes {
+    position: static;
+    float: none;
+    width: 100%;
+    margin: 0 auto 30px auto;
+    top: 0;
+    padding: 40px 10px 40px 10px;
+    max-width: 100%;
+    clear: both;
   }
   #diplomes div {
     justify-content: center;
     padding-bottom: 20px;
-    /* align-items: center; */
-    /* align-content: center; */
-    /* justify-items: center; */
   }
   #ajc {
     padding: 20px 0 0 8%;
@@ -943,7 +746,6 @@ footer p {
   #licence {
     padding: 20px 0 0 9%;
   }
-
   #ajc h4 img,
   #master h4 img,
   #licence h4 img {
@@ -958,47 +760,37 @@ footer p {
   .data-texte {
     font-size: 0.9em;
   }
-
   .data-span {
     font-size: 0.4em;
   }
-
   #parcours {
     margin-top: -50px;
   }
-
   #portfolio div {
     margin: 1%;
-    /* display: block; */
     justify-items: center;
     align-items: center;
     justify-content: center;
     align-content: center;
   }
-
   .cadre {
     padding: 20px 20px 5px 5px;
     width: 100%;
   }
-
   #other-skills h3,
   #hobbies h3,
   #footer h3 {
     font-size: 2em;
   }
-
-  /* #projet */
   .projet:nth-child(2) {
     margin-left: 0%;
   }
   .projet:nth-child(3) {
     margin-left: 0%;
   }
-
   .cloud {
     font-size: 1em;
   }
-
   .network {
     font-size: 1.4em;
     padding: 14px 20px;
@@ -1007,7 +799,6 @@ footer p {
   textarea {
     width: 300px;
   }
-
   .carousel > .wrap > ul {
     height: 170px;
   }
@@ -1022,8 +813,17 @@ footer p {
     font-size: 0.7em;
     text-align: justify;
   }
+  /* PERFORMANCE : background-attachment sur mobile */
+  header, #ags, footer {
+    background-attachment: scroll !important;
+  }
 }
-
+@media screen and (max-width: 600px) {
+  #hobbies .carousel img {
+    max-width: 60px;
+    max-height: 60px;
+  }
+}
 @media screen and (max-width: 520px) {
   h1 {
     padding-top: 20px;
@@ -1034,7 +834,6 @@ footer p {
   header {
     margin-bottom: 50px;
   }
-
   #master,
   #licence {
     padding: 40px 0 0 3%;
@@ -1048,24 +847,20 @@ footer p {
   .data-texte {
     font-size: 0.8em;
   }
-
   .data-span {
     font-size: 0.3em;
   }
-
   #ajc h4 #master h4,
   #licence h4 {
     font-size: 1em;
     letter-spacing: 0.04em;
     padding-bottom: 3px;
   }
-
   #ajc h4 img,
   #master h4 img,
   #licence h4 img {
     max-height: 30px;
   }
-
   #other-skills {
     display: none;
   }
@@ -1084,7 +879,6 @@ footer p {
   .img-container {
     max-height: 40vh;
   }
-
   .legende {
     padding: 10px 0 0 0px;
   }
@@ -1094,18 +888,15 @@ footer p {
     margin-top: 0px;
     font-size: 0.6em;
   }
-
   .legende h4 {
     font-size: 0.7em;
     font-weight: bold;
     text-transform: uppercase;
     text-align: justify;
   }
-
   .carousel > .wrap > ul {
     height: 17vh;
   }
-
   footer {
     padding: 40px 20px 5px 30px;
   }
